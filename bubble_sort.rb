@@ -1,3 +1,18 @@
 def bubble_sort(arr)
-  # code in here
+  sorted = false
+
+  until sorted
+    sorted = true
+
+    (arr.count - 1).times do |i|
+
+      if arr[i] > arr[i + 1]
+        swap = true
+        arr[i], arr[i + 1] = arr[i + 1], arr[i]
+
+        sorted = false
+      end
+    end
+  end
+  arr
 end
